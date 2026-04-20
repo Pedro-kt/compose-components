@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.Explore
+import androidx.compose.material.icons.filled.Slideshow
 import androidx.compose.material.icons.filled.SmartButton
 import androidx.compose.material.icons.filled.Speed
 import androidx.compose.material.icons.filled.ViewCarousel
@@ -104,6 +105,13 @@ private val catalog = listOf(
         description = "Hero image - shared element - detail expand",
         icon = Icons.Default.Explore,
         gradient = listOf(Color(0xFF0D1B2A), Color(0xFF0A3D3D)),
+    ),
+    ComponentEntry(
+        screen = Screen.StoriesProgress,
+        name = "Stories Progress",
+        description = "Segmented timer - tap navigate - hold pause",
+        icon = Icons.Default.Slideshow,
+        gradient = listOf(Color(0xFF1A0A1A), Color(0xFF3A1A3A)),
     ),
 )
 
