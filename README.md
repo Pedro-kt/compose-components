@@ -34,12 +34,15 @@ A button that morphs from a full-width rectangle to a circle on tap. Goes throug
 ### Onboarding Pager
 A minimalist onboarding flow built with `HorizontalPager`. Each page animates its title and subtitle in with a fade + slide-up on entry. The page indicators morph between dot and pill with a spring animation, and the primary button crossfades between "Next" and "Get Started" on the last page. The skip button fades out when there is nothing left to skip.
 
+### Travel Card
+A travel destination card inspired by Airbnb-style UIs. Tapping the card triggers a `SharedTransitionLayout` hero animation where the image transitions to a full-screen detail view. The detail content slides up from the bottom via `AnimatedVisibility` with `slideInVertically`, creating a bottom sheet feel. Includes a save toggle, rating display, amenity chips, and a Book Now CTA.
+
 ## Tech Stack
 
 - **Language:** Kotlin
 - **UI:** Jetpack Compose + Material 3
 - **Navigation:** Navigation Compose 2.8.9
-- **Animations:** `animateFloatAsState`, `animateDpAsState`, `animateColorAsState`, `AnimatedContent`, `rememberInfiniteTransition`, `HorizontalPager`
+- **Animations:** `animateFloatAsState`, `animateDpAsState`, `animateColorAsState`, `AnimatedContent`, `AnimatedVisibility`, `SharedTransitionLayout`, `rememberInfiniteTransition`, `HorizontalPager`
 - **Drawing:** Compose `Canvas`, `Path`, `DrawScope`
 - **Min SDK:** 24
 
@@ -57,7 +60,8 @@ app/src/main/java/com/gamman/jetpackcomposecomponents/
 │   │   ├── circulargauge/
 │   │   ├── barchart/
 │   │   ├── loadingbutton/
-│   │   └── onboardingpager/
+│   │   ├── onboardingpager/
+│   │   └── travelcard/
 │   └── screens/            # One screen wrapper per component
 └── MainActivity.kt
 ```

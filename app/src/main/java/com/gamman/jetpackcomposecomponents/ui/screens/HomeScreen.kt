@@ -23,6 +23,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.CreditCard
+import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.SmartButton
 import androidx.compose.material.icons.filled.Speed
 import androidx.compose.material.icons.filled.ViewCarousel
@@ -43,7 +44,7 @@ import androidx.compose.ui.unit.sp
 import com.gamman.jetpackcomposecomponents.navigation.Screen
 
 // ---------------------------------------------------------------------------
-// Catalog - agregar una entrada por cada componente nuevo
+// Catalog - add one entry per new component
 // ---------------------------------------------------------------------------
 
 data class ComponentEntry(
@@ -96,6 +97,13 @@ private val catalog = listOf(
         description = "Pager - animated indicators - transitions",
         icon = Icons.Default.ViewCarousel,
         gradient = listOf(Color(0xFF0D0D1A), Color(0xFF1A1A4E)),
+    ),
+    ComponentEntry(
+        screen = Screen.TravelCard,
+        name = "Travel Card",
+        description = "Hero image - shared element - detail expand",
+        icon = Icons.Default.Explore,
+        gradient = listOf(Color(0xFF0D1B2A), Color(0xFF0A3D3D)),
     ),
 )
 
