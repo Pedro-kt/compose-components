@@ -19,12 +19,15 @@ Animated bar chart with staggered entry per bar, top-rounded corners via `Path`,
 ### Loading Button
 A button that morphs from a full-width rectangle to a circle on tap. Goes through idle -> loading (animated spinner with variable sweep) -> success / error states, with distinct `AnimatedContent` transitions per step and press-scale feedback.
 
+### Onboarding Pager
+A minimalist onboarding flow built with `HorizontalPager`. Each page animates its title and subtitle in with a fade + slide-up on entry. The page indicators morph between dot and pill with a spring animation, and the primary button crossfades between "Next" and "Get Started" on the last page. The skip button fades out when there is nothing left to skip.
+
 ## Tech Stack
 
 - **Language:** Kotlin
 - **UI:** Jetpack Compose + Material 3
 - **Navigation:** Navigation Compose 2.8.9
-- **Animations:** `animateFloatAsState`, `animateDpAsState`, `animateColorAsState`, `AnimatedContent`, `rememberInfiniteTransition`
+- **Animations:** `animateFloatAsState`, `animateDpAsState`, `animateColorAsState`, `AnimatedContent`, `rememberInfiniteTransition`, `HorizontalPager`
 - **Drawing:** Compose `Canvas`, `Path`, `DrawScope`
 - **Min SDK:** 24
 
@@ -41,7 +44,8 @@ app/src/main/java/com/gamman/jetpackcomposecomponents/
 │   │   ├── expandablefab/
 │   │   ├── circulargauge/
 │   │   ├── barchart/
-│   │   └── loadingbutton/
+│   │   ├── loadingbutton/
+│   │   └── onboardingpager/
 │   └── screens/            # One screen wrapper per component
 └── MainActivity.kt
 ```

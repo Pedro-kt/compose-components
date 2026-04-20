@@ -7,4 +7,5 @@ sealed class Screen(val route: String) {
     data object CircularGauge : Screen("circular_gauge")
     data object BarChart : Screen("bar_chart")
     data object LoadingButton : Screen("loading_button")
+    data object OnboardingPager : Screen("onboarding_pager")
 }

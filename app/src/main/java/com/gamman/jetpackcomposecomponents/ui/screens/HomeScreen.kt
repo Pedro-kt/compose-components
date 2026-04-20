@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.SmartButton
 import androidx.compose.material.icons.filled.Speed
+import androidx.compose.material.icons.filled.ViewCarousel
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -88,6 +89,13 @@ private val catalog = listOf(
         description = "Morphing - spinner - success/error",
         icon = Icons.Default.SmartButton,
         gradient = listOf(Color(0xFF1A0E2E), Color(0xFF2E0E1A)),
+    ),
+    ComponentEntry(
+        screen = Screen.OnboardingPager,
+        name = "Onboarding Pager",
+        description = "Pager - animated indicators - transitions",
+        icon = Icons.Default.ViewCarousel,
+        gradient = listOf(Color(0xFF0D0D1A), Color(0xFF1A1A4E)),
     ),
 )
 

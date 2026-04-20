@@ -10,6 +10,7 @@ import com.gamman.jetpackcomposecomponents.ui.screens.CircularGaugeScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.CreditCardScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.ExpandableFabScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.HomeScreen
+import com.gamman.jetpackcomposecomponents.ui.screens.OnboardingPagerScreen
 
 @Composable
 fun AppNavigation() {
@@ -36,6 +37,9 @@ fun AppNavigation() {
         }
         composable(Screen.LoadingButton.route) {
             LoadingButtonScreen(onBack = { navController.popBackStack() })
+        }
+        composable(Screen.OnboardingPager.route) {
+            OnboardingPagerScreen(onBack = { navController.popBackStack() })
         }
     }
 }
