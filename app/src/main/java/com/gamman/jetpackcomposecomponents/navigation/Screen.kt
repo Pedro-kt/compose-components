@@ -1,0 +1,10 @@
+package com.gamman.jetpackcomposecomponents.navigation
+
+sealed class Screen(val route: String) {
+    data object Home : Screen("home")
+    data object CreditCard : Screen("credit_card")
+    data object ExpandableFab : Screen("expandable_fab")
+    data object CircularGauge : Screen("circular_gauge")
+    data object BarChart : Screen("bar_chart")
+    data object LoadingButton : Screen("loading_button")
+}
