@@ -6,11 +6,16 @@ A portfolio of custom Android UI components built with Jetpack Compose, focused 
 
 <table>
   <tr>
-    <td align="center"><img src="assets/animation_1.gif" alt="Loading Button" height="320"/><br/><sub>Loading Button</sub></td>
-    <td align="center"><img src="assets/animation_2.gif" alt="Bar Chart" height="320"/><br/><sub>Bar Chart</sub></td>
-    <td align="center"><img src="assets/animation_3.gif" alt="Circular Gauge" height="320"/><br/><sub>Circular Gauge</sub></td>
-    <td align="center"><img src="assets/animation_4.gif" alt="Expandable FAB" height="320"/><br/><sub>Expandable FAB</sub></td>
-    <td align="center"><img src="assets/animation_5.gif" alt="Credit Card" height="320"/><br/><sub>Credit Card</sub></td>
+    <td align="center"><img src="assets/loading_button.gif" alt="Loading Button" width="200"/><br/><sub>Loading Button</sub></td>
+    <td align="center"><img src="assets/bar_chart.gif" alt="Bar Chart" width="200"/><br/><sub>Bar Chart</sub></td>
+    <td align="center"><img src="assets/circular_gauge.gif" alt="Circular Gauge" width="200"/><br/><sub>Circular Gauge</sub></td>
+    <td align="center"><img src="assets/fab.gif" alt="Expandable FAB" width="200"/><br/><sub>Expandable FAB</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/card.gif" alt="Credit Card" width="200"/><br/><sub>Credit Card</sub></td>
+    <td align="center"><img src="assets/horizontal_pager.gif" alt="Onboarding Pager" width="200"/><br/><sub>Onboarding Pager</sub></td>
+    <td align="center"><img src="assets/travel_card.gif" alt="Travel Card" width="200"/><br/><sub>Travel Card</sub></td>
+    <td align="center"><img src="assets/stories_progress.gif" alt="Stories Progress" width="200"/><br/><sub>Stories Progress</sub></td>
   </tr>
 </table>
 
