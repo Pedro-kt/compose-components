@@ -6,11 +6,11 @@ A portfolio of custom Android UI components built with Jetpack Compose, focused 
 
 <table>
   <tr>
-    <td align="center"><img src="assets/animation_1.gif" alt="Loading Button" width="160"/><br/><sub>Loading Button</sub></td>
-    <td align="center"><img src="assets/animation_2.gif" alt="Bar Chart" width="160"/><br/><sub>Bar Chart</sub></td>
-    <td align="center"><img src="assets/animation_3.gif" alt="Circular Gauge" width="160"/><br/><sub>Circular Gauge</sub></td>
-    <td align="center"><img src="assets/animation_4.gif" alt="Expandable FAB" width="160"/><br/><sub>Expandable FAB</sub></td>
-    <td align="center"><img src="assets/animation_5.gif" alt="Credit Card" width="160"/><br/><sub>Credit Card</sub></td>
+    <td align="center"><img src="assets/animation_1.gif" alt="Loading Button" height="320"/><br/><sub>Loading Button</sub></td>
+    <td align="center"><img src="assets/animation_2.gif" alt="Bar Chart" height="320"/><br/><sub>Bar Chart</sub></td>
+    <td align="center"><img src="assets/animation_3.gif" alt="Circular Gauge" height="320"/><br/><sub>Circular Gauge</sub></td>
+    <td align="center"><img src="assets/animation_4.gif" alt="Expandable FAB" height="320"/><br/><sub>Expandable FAB</sub></td>
+    <td align="center"><img src="assets/animation_5.gif" alt="Credit Card" height="320"/><br/><sub>Credit Card</sub></td>
   </tr>
 </table>
 
