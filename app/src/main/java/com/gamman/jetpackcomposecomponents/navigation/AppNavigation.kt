@@ -11,6 +11,8 @@ import com.gamman.jetpackcomposecomponents.ui.screens.CreditCardScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.ExpandableFabScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.HomeScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.OnboardingPagerScreen
+import com.gamman.jetpackcomposecomponents.ui.screens.MusicPlayerScreen
+import com.gamman.jetpackcomposecomponents.ui.screens.PinOtpScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.StoriesProgressScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.TravelCardScreen
 
@@ -48,6 +50,12 @@ fun AppNavigation() {
         }
         composable(Screen.StoriesProgress.route) {
             StoriesProgressScreen(onBack = { navController.popBackStack() })
+        }
+        composable(Screen.PinOtp.route) {
+            PinOtpScreen(onBack = { navController.popBackStack() })
+        }
+        composable(Screen.MusicPlayer.route) {
+            MusicPlayerScreen(onBack = { navController.popBackStack() })
         }
     }
 }

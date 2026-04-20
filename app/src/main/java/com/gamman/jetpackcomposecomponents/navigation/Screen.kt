@@ -10,4 +10,6 @@ sealed class Screen(val route: String) {
     data object OnboardingPager : Screen("onboarding_pager")
     data object TravelCard : Screen("travel_card")
     data object StoriesProgress : Screen("stories_progress")
+    data object PinOtp : Screen("pin_otp")
+    data object MusicPlayer : Screen("music_player")
 }

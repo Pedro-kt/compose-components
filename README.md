@@ -40,12 +40,18 @@ A full-screen stories viewer inspired by Instagram Stories. Five Japan travel ph
 ### Travel Card
 A travel destination card inspired by Airbnb-style UIs. Tapping the card triggers a `SharedTransitionLayout` hero animation where the image transitions to a full-screen detail view. The detail content slides up from the bottom via `AnimatedVisibility` with `slideInVertically`, creating a bottom sheet feel. Includes a save toggle, rating display, amenity chips, and a Book Now CTA.
 
+### PIN / OTP Entry
+A 6-digit PIN entry screen with a custom numeric keypad. Each digit box animates in with a spring scale-up on press and a bounce-back on delete. On submission, the screen enters a loading state, then transitions to success (boxes turn green with a checkmark icon) or error (boxes turn red + horizontal shake animation). After an error, the input resets automatically and returns to idle.
+
+### Music Player
+A compact Spotify-style music player card. A vinyl disc rotates infinitely while playing and pauses in place on stop, driven by an `Animatable` loop that cancels automatically on state change. The card background transitions between track accent colors via `animateColorAsState`, and a large radial gradient glow behind the card shifts color per track. The seek bar is drawn on `Canvas` inside `BoxWithConstraints` and handles both tap-to-seek and drag-to-seek via raw pointer events (`awaitEachGesture`). Play/pause uses `AnimatedContent` with a scale+fade transition between icons. Track dots below the card animate between circle and pill with a spring. A `rememberUpdatedState` fix ensures the play/pause button always dispatches to the current state rather than a stale captured lambda.
+
 ## Tech Stack
 
 - **Language:** Kotlin
 - **UI:** Jetpack Compose + Material 3
 - **Navigation:** Navigation Compose 2.8.9
-- **Animations:** `animateFloatAsState`, `animateDpAsState`, `animateColorAsState`, `AnimatedContent`, `AnimatedVisibility`, `SharedTransitionLayout`, `Animatable`, `rememberInfiniteTransition`, `HorizontalPager`
+- **Animations:** `animateFloatAsState`, `animateDpAsState`, `animateColorAsState`, `AnimatedContent`, `AnimatedVisibility`, `SharedTransitionLayout`, `Animatable`, `rememberInfiniteTransition`, `rememberUpdatedState`, `HorizontalPager`
 - **Image loading:** Coil 3 (`AsyncImage`, preload, crossfade)
 - **Drawing:** Compose `Canvas`, `Path`, `DrawScope`
 - **Min SDK:** 24
@@ -66,7 +72,9 @@ app/src/main/java/com/gamman/jetpackcomposecomponents/
 │   │   ├── loadingbutton/
 │   │   ├── onboardingpager/
 │   │   ├── storiesprogress/
-│   │   └── travelcard/
+│   │   ├── travelcard/
+│   │   ├── pinotp/
+│   │   └── musicplayer/
 │   └── screens/            # One screen wrapper per component
 └── MainActivity.kt
 ```

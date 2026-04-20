@@ -24,6 +24,8 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.Explore
+import androidx.compose.material.icons.filled.MusicNote
+import androidx.compose.material.icons.filled.Password
 import androidx.compose.material.icons.filled.Slideshow
 import androidx.compose.material.icons.filled.SmartButton
 import androidx.compose.material.icons.filled.Speed
@@ -112,6 +114,20 @@ private val catalog = listOf(
         description = "Segmented timer - tap navigate - hold pause",
         icon = Icons.Default.Slideshow,
         gradient = listOf(Color(0xFF1A0A1A), Color(0xFF3A1A3A)),
+    ),
+    ComponentEntry(
+        screen = Screen.PinOtp,
+        name = "PIN / OTP Input",
+        description = "Pop entry - shake error - checkmark success",
+        icon = Icons.Default.Password,
+        gradient = listOf(Color(0xFF0E0E2E), Color(0xFF2E0E3A)),
+    ),
+    ComponentEntry(
+        screen = Screen.MusicPlayer,
+        name = "Music Player",
+        description = "Vinyl rotation - seek bar - animated controls",
+        icon = Icons.Default.MusicNote,
+        gradient = listOf(Color(0xFF1A0A2E), Color(0xFF0E1A3A)),
     ),
 )
 
