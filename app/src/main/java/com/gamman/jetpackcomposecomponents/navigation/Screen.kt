@@ -12,4 +12,5 @@ sealed class Screen(val route: String) {
     data object StoriesProgress : Screen("stories_progress")
     data object PinOtp : Screen("pin_otp")
     data object MusicPlayer : Screen("music_player")
+    data object WalletStack : Screen("wallet_stack")
 }

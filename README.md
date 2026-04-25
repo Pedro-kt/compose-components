@@ -17,6 +17,9 @@ A portfolio of custom Android UI components built with Jetpack Compose, focused 
     <td align="center"><img src="assets/travel_card.gif" alt="Travel Card" width="200"/><br/><sub>Travel Card</sub></td>
     <td align="center"><img src="assets/stories_progress.gif" alt="Stories Progress" width="200"/><br/><sub>Stories Progress</sub></td>
   </tr>
+  <tr>
+    <td align="center"><img src="assets/wallet_stack.gif" alt="Wallet Stack" width="200"/><br/><sub>Wallet Stack</sub></td>
+  </tr>
 </table>
 
 ## Components
@@ -51,6 +54,9 @@ A 6-digit PIN entry screen with a custom numeric keypad. Each digit box animates
 ### Music Player
 A compact Spotify-style music player card. A vinyl disc rotates infinitely while playing and pauses in place on stop, driven by an `Animatable` loop that cancels automatically on state change. The card background transitions between track accent colors via `animateColorAsState`, and a large radial gradient glow behind the card shifts color per track. The seek bar is drawn on `Canvas` inside `BoxWithConstraints` and handles both tap-to-seek and drag-to-seek via raw pointer events (`awaitEachGesture`). Play/pause uses `AnimatedContent` with a scale+fade transition between icons. Track dots below the card animate between circle and pill with a spring. A `rememberUpdatedState` fix ensures the play/pause button always dispatches to the current state rather than a stale captured lambda.
 
+### Wallet Stack
+A wallet UI showing a stack of payment cards that collapses into a layered fan and expands on tap. Each card reuses the `CardFront` composable from the Credit Card component, keeping chip, contactless icon, network logo, and gradient design consistent. Card Y position and scale animate with a `spring` using `DampingRatioMediumBouncy`, creating a natural bouncy spread. Selecting an expanded card brings it to the top of the stack with the same spring animation. The active card's balance and bank name update via an `AnimatedContent` crossfade. `BackHandler` intercepts the system back gesture while expanded to collapse the stack instead of navigating away.
+
 ## Tech Stack
 
 - **Language:** Kotlin
@@ -79,7 +85,8 @@ app/src/main/java/com/gamman/jetpackcomposecomponents/
 │   │   ├── storiesprogress/
 │   │   ├── travelcard/
 │   │   ├── pinotp/
-│   │   └── musicplayer/
+│   │   ├── musicplayer/
+│   │   └── walletstack/
 │   └── screens/            # One screen wrapper per component
 └── MainActivity.kt
 ```

@@ -15,6 +15,7 @@ import com.gamman.jetpackcomposecomponents.ui.screens.MusicPlayerScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.PinOtpScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.StoriesProgressScreen
 import com.gamman.jetpackcomposecomponents.ui.screens.TravelCardScreen
+import com.gamman.jetpackcomposecomponents.ui.screens.WalletStackScreen
 
 @Composable
 fun AppNavigation() {
@@ -56,6 +57,9 @@ fun AppNavigation() {
         }
         composable(Screen.MusicPlayer.route) {
             MusicPlayerScreen(onBack = { navController.popBackStack() })
+        }
+        composable(Screen.WalletStack.route) {
+            WalletStackScreen(onBack = { navController.popBackStack() })
         }
     }
 }

@@ -136,19 +136,18 @@ fun CreditCardComponent(
 // ---------------------------------------------------------------------------
 
 @Composable
-private fun CardFront(
+internal fun CardFront(
     cardData: CardData,
     isDataHidden: Boolean,
     modifier: Modifier = Modifier,
-) {
-    val gradient = Brush.linearGradient(
+    gradient: Brush = Brush.linearGradient(
         colorStops = arrayOf(
             0.0f to Color(0xFF1A1A2E),
             0.5f to Color(0xFF16213E),
             1.0f to Color(0xFF533483),
         ),
-    )
-
+    ),
+) {
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -276,7 +275,7 @@ private fun CardBack(
 // ---------------------------------------------------------------------------
 
 @Composable
-private fun DecorationCircles() {
+internal fun DecorationCircles() {
     Canvas(modifier = Modifier.fillMaxSize()) {
         drawCircle(
             color = Color.White.copy(alpha = 0.04f),
@@ -292,7 +291,7 @@ private fun DecorationCircles() {
 }
 
 @Composable
-private fun ChipIcon(modifier: Modifier = Modifier) {
+internal fun ChipIcon(modifier: Modifier = Modifier) {
     Canvas(modifier = modifier.size(44.dp, 32.dp)) {
         val gold = Color(0xFFD4AF37)
         val goldDark = Color(0xFFAA8800)
@@ -317,7 +316,7 @@ private fun ChipIcon(modifier: Modifier = Modifier) {
 }
 
 @Composable
-private fun ContactlessIcon(modifier: Modifier = Modifier) {
+internal fun ContactlessIcon(modifier: Modifier = Modifier) {
     Canvas(modifier = modifier.size(26.dp, 26.dp)) {
         val strokeW = 2.dp.toPx()
         listOf(0.22f, 0.40f, 0.58f).forEach { ratio ->
@@ -337,7 +336,7 @@ private fun ContactlessIcon(modifier: Modifier = Modifier) {
 }
 
 @Composable
-private fun NetworkLogo(network: CardNetwork, modifier: Modifier = Modifier) {
+internal fun NetworkLogo(network: CardNetwork, modifier: Modifier = Modifier) {
     when (network) {
         CardNetwork.VISA -> Text(
             text = "VISA",
@@ -408,7 +407,7 @@ private fun CvvBox(cvv: String, isHidden: Boolean) {
 }
 
 @Composable
-private fun CardLabel(text: String) {
+internal fun CardLabel(text: String) {
     Text(
         text = text,
         color = Color.White.copy(alpha = 0.55f),
@@ -419,7 +418,7 @@ private fun CardLabel(text: String) {
 }
 
 @Composable
-private fun CardValue(text: String) {
+internal fun CardValue(text: String) {
     Text(
         text = text,
         color = Color.White,
@@ -433,7 +432,7 @@ private fun CardValue(text: String) {
 // Helpers
 // ---------------------------------------------------------------------------
 
-private fun maskedNumber(cardNumber: String, isHidden: Boolean): String {
+internal fun maskedNumber(cardNumber: String, isHidden: Boolean): String {
     if (!isHidden) return cardNumber
     val last4 = cardNumber.filter { it.isDigit() }.takeLast(4)
     return "**** **** **** $last4"

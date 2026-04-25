@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBalanceWallet
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.CreditCard
@@ -128,6 +129,13 @@ private val catalog = listOf(
         description = "Vinyl rotation - seek bar - animated controls",
         icon = Icons.Default.MusicNote,
         gradient = listOf(Color(0xFF1A0A2E), Color(0xFF0E1A3A)),
+    ),
+    ComponentEntry(
+        screen = Screen.WalletStack,
+        name = "Wallet Stack",
+        description = "Spring stack - card select - balance display",
+        icon = Icons.Default.AccountBalanceWallet,
+        gradient = listOf(Color(0xFF0D1B2A), Color(0xFF0D3B6B)),
     ),
 )
 
