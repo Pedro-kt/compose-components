@@ -17,9 +17,6 @@ A portfolio of custom Android UI components built with Jetpack Compose, focused 
     <td align="center"><img src="assets/travel_card.gif" alt="Travel Card" width="200"/><br/><sub>Travel Card</sub></td>
     <td align="center"><img src="assets/stories_progress.gif" alt="Stories Progress" width="200"/><br/><sub>Stories Progress</sub></td>
   </tr>
-  <tr>
-    <td align="center"><img src="assets/wallet_stack.gif" alt="Wallet Stack" width="200"/><br/><sub>Wallet Stack</sub></td>
-  </tr>
 </table>
 
 ## Components
