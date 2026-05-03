@@ -17,6 +17,10 @@ A portfolio of custom Android UI components built with Jetpack Compose, focused 
     <td align="center"><img src="assets/travel_card.gif" alt="Travel Card" width="200"/><br/><sub>Travel Card</sub></td>
     <td align="center"><img src="assets/stories_progress.gif" alt="Stories Progress" width="200"/><br/><sub>Stories Progress</sub></td>
   </tr>
+   <!-- <tr> -->
+    <!-- <td align="center"><img src="assets/wallet_stack.gif" alt="Wallet Stack" width="200"/><br/><sub>Wallet Stack</sub></td> -->
+    <!-- <td align="center"><img src="assets/aurora_shader.gif" alt="Aurora Shader" width="200"/><br/><sub>Aurora Shader</sub></td> -->
+ <!-- </tr> -->
 </table>
 
 ## Components
@@ -54,6 +58,9 @@ A compact Spotify-style music player card. A vinyl disc rotates infinitely while
 ### Wallet Stack
 A wallet UI showing a stack of payment cards that collapses into a layered fan and expands on tap. Each card reuses the `CardFront` composable from the Credit Card component, keeping chip, contactless icon, network logo, and gradient design consistent. Card Y position and scale animate with a `spring` using `DampingRatioMediumBouncy`, creating a natural bouncy spread. Selecting an expanded card brings it to the top of the stack with the same spring animation. The active card's balance and bank name update via an `AnimatedContent` crossfade. `BackHandler` intercepts the system back gesture while expanded to collapse the stack instead of navigating away.
 
+### Aurora Shader
+A full-screen GPU shader written in AGSL (Android Graphics Shading Language), running via `RuntimeShader` (API 33+). The aurora effect is built in layers: five octaves of value noise are combined using FBM (Fractal Brownian Motion) to warp the UV space organically, then three Gaussian bands are placed along that warped field with layered sine waves driving horizontal movement. Four colors — teal, green, violet, and blue — are blended per-pixel using noise-driven mix factors, giving each band a shifting, non-uniform palette. Stars are placed on a 220×220 grid hash and twinkle with individual sine frequencies. Touch input is tracked each frame and passed as uniforms; a radial ripple distortion expands from the finger position using `exp(-dist)` falloff combined with a sine ring, deforming the UV coordinates used for aurora sampling. A weather card overlay floats above the shader with a ±7dp infinite oscillation via `rememberInfiniteTransition`.
+
 ## Tech Stack
 
 - **Language:** Kotlin
@@ -62,6 +69,7 @@ A wallet UI showing a stack of payment cards that collapses into a layered fan a
 - **Animations:** `animateFloatAsState`, `animateDpAsState`, `animateColorAsState`, `AnimatedContent`, `AnimatedVisibility`, `SharedTransitionLayout`, `Animatable`, `rememberInfiniteTransition`, `rememberUpdatedState`, `HorizontalPager`
 - **Image loading:** Coil 3 (`AsyncImage`, preload, crossfade)
 - **Drawing:** Compose `Canvas`, `Path`, `DrawScope`
+- **GPU shaders:** AGSL `RuntimeShader` + `ShaderBrush`, FBM noise, per-frame uniforms via `withFrameNanos` (API 33+)
 - **Min SDK:** 24
 
 ## Project Structure
@@ -83,7 +91,8 @@ app/src/main/java/com/gamman/jetpackcomposecomponents/
 │   │   ├── travelcard/
 │   │   ├── pinotp/
 │   │   ├── musicplayer/
-│   │   └── walletstack/
+│   │   ├── walletstack/
+│   │   └── aurorashader/
 │   └── screens/            # One screen wrapper per component
 └── MainActivity.kt
 ```
